@@ -16,8 +16,8 @@ def hello():
         visits = "<i>cannot connect to Redis, counter disabled</i>"
 
     html = "<h3>Hello</h3>" \
-           "And, again" \
-           "Welcome to the {name} " \
+           "<p>And, again</p>" \
+           "Welcome to the {name}<br/>" \
            "<b>Hostname:</b> {hostname}<br/>" \
            "<b>Visits:</b> {visits}"
     return html.format(name=os.getenv("NAME"), hostname=socket.gethostname(), visits=visits)
