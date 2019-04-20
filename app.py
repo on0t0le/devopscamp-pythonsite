@@ -20,7 +20,7 @@ def hello():
            "Welcome to the {name}<br/>" \
            "<b>Hostname:</b> {hostname}<br/>" \
            "<b>Visits:</b> {visits}"
-    return html.format(name=os.getenv("NAME"), hostname=socket.gethostname(), visits=visits)
+    return html.format(name=os.getenv("NAME","Aperture science computer aided enrichment center"), hostname=socket.gethostname(), visits=visits)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
